@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vue in action</title>
+    <script src="https://unpkg.com/vue/dist/vue.js">
+    </script>
+</head>
+
+<body>
+    <h1>渲染列表</h1>
+    <div id="app">
+        <ul>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ul>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                todos: [{
+                    text: 'Learn JavaScirpt'
+                }, {
+                    text: 'Learn Vue.js'
+                }, {
+                    text: 'Build Something Awesome'
+                }]
+            }
+        });
+    </script>
+</body>
+
+</html>
