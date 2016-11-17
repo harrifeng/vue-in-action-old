@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vue in action</title>
+    <script src="https://unpkg.com/vue/dist/vue.js">
+    </script>
+</head>
+
+<body>
+    <h1>概述</h1>
+    <div id="app">
+        Hello {{ name }} !
+    </div>
+    <script>
+        var exampleData = {
+            name: 'Vue.js'
+        }
+
+        var exampleVM = new Vue({
+            el: '#app',
+            data: exampleData
+        })
+    </script>
+</body>
+
+</html>
