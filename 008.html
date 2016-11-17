@@ -8,15 +8,21 @@
 </head>
 
 <body>
-    <h1>数据绑定语法</h1>
+    <h1>计算属性</h1>
     <div id="app">
-        <span>{{* msg }}</span>
+        <p>Original message: " {{ message }}"</p>
+        <p>Computed reversed message: " {{ reversedMessage }} "</p>
     </div>
     <script>
-        var exampleVM = new Vue({
+        var vm = new Vue({
             el: '#app',
             data: {
-                msg: "hello"
+                message: 'Hello'
+            },
+            computed: {
+                reversedMessage: function() {
+                    return this.message.split('').reverse().join('')
+                }
             }
         })
     </script>

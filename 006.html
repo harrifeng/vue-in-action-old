@@ -8,18 +8,17 @@
 </head>
 
 <body>
-    <h1>概述</h1>
+    <h1>双向数据绑定</h1>
     <div id="app">
-        Hello {{ name }} !
+        <p>{{ message }}</p>
+        <input v-model="message">
     </div>
     <script>
-        var exampleData = {
-            name: 'Vue.js'
-        }
-
         var exampleVM = new Vue({
             el: '#app',
-            data: exampleData
+            data: {
+                message: 'Hello Vue'
+            }
         })
     </script>
 </body>

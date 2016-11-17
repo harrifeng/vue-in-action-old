@@ -8,15 +8,17 @@
 </head>
 
 <body>
-    <h1>概述</h1>
+    <h1>模板文本</h1>
     <div id="app">
-        <p v-if="greeting">Hello!</p>
+        <p> Changed Version:==>{{ msg }}</p>
+        <p v-once> Not Changed Version:==>{{ msg }}</p>
+        <input v-model="msg">
     </div>
     <script>
         var exampleVM = new Vue({
             el: '#app',
             data: {
-                greeting: true
+                msg: 'hello'
             }
         })
     </script>
