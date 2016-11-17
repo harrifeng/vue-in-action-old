@@ -8,15 +8,15 @@
 </head>
 
 <body>
-    <h1>概述</h1>
+    <h1>数据绑定语法</h1>
     <div id="app">
-        <p v-if="greeting">Hello!</p>
+        <span>{{* msg }}</span>
     </div>
     <script>
         var exampleVM = new Vue({
             el: '#app',
             data: {
-                greeting: true
+                msg: "hello"
             }
         })
     </script>

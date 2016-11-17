@@ -3,26 +3,30 @@
 
 <head>
     <title>Vue in action</title>
-    <script src="https://unpkg.com/vue/dist/vue.js">
+    <script src="./js/vue.js">
     </script>
 </head>
 
 <body>
-    <h1>处理用户输入</h1>
+    <h1>渲染列表</h1>
     <div id="app">
-        <p> {{ message }} </p>
-        <button v-on:click="reverseMessage">Reverse Message</button>
+        <ul>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ul>
     </div>
     <script>
         var app = new Vue({
             el: '#app',
             data: {
-                message: 'Hello Vue.js!'
-            },
-            methods: {
-                reverseMessage: function() {
-                    this.message = this.message.split('').reverse().join('')
-                }
+                todos: [{
+                    text: 'Learn JavaScirpt'
+                }, {
+                    text: 'Learn Vue.js'
+                }, {
+                    text: 'Build Something Awesome'
+                }]
             }
         });
     </script>

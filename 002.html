@@ -3,21 +3,22 @@
 
 <head>
     <title>Vue in action</title>
-    <script src="https://unpkg.com/vue/dist/vue.js">
+    <script src="./js/vue.js">
     </script>
 </head>
 
 <body>
-    <h1>双向绑定</h1>
+    <h1>将这个元素节点的titel属性和Vue实例的message属性绑定到一起</h1>
     <div id="app">
-        <p>{{ message }}</p>
-        <input v-model="message">
+        <span v-bind:title="message">
+            Hover your mouse over me for a afew seconds to see my dynamically bound title!
+        </span>
     </div>
     <script>
         var app = new Vue({
             el: '#app',
             data: {
-                message: 'Hello Vue!'
+                message: 'You loaded this page on ' + new Date()
             }
         });
     </script>
